@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(180deg, #000000, #1a001f, #2b001f);
+  color: white;
+  text-align: center;
+}
+
+.music {
+  padding: 10px;
+}
+
+h1 {
+  margin-top: 15px;
+}
+
+.carta {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+.heart {
+  position: relative;
+  width: 300px;
+  height: 270px;
+  margin: 40px auto;
+}
+
+.heart img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  position: absolute;
+  border-radius: 15px;
+}
+
+/* Coração das fotos */
+.heart img:nth-child(1){ top:0; left:110px; }
+.heart img:nth-child(2){ top:40px; left:30px; }
+.heart img:nth-child(3){ top:40px; left:190px; }
+.heart img:nth-child(4){ top:110px; left:0; }
+.heart img:nth-child(5){ top:110px; left:220px; }
+.heart img:nth-child(6){ top:180px; left:60px; }
+.heart img:nth-child(7){ top:180px; left:160px; }
+
+.texto-final {
+  margin: 20px;
+}
+
+button {
+  background: #7b2cbf;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  font-size: 18px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+#amor-gigante {
+  display: none;
+  font-size: 50px;
+  margin: 40px 0;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Botão coração gigante */
+.botao-coracao {
+  display: inline-block;
+  margin: 60px auto;
+  padding: 40px;
+  background: radial-gradient(circle, #7b2cbf, #3a0ca3);
+  color: white;
+  font-size: 22px;
+  text-decoration: none;
+  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  box-shadow: 0 0 30px rgba(128, 0, 255, 0.6);
+  transition: transform 0.3s;
+}
+
+.botao-coracao:hover {
+  transform: scale(1.1);
+}
+
+/* Texto colorido */
+.roxo {
+  color: #b517ff;
+  font-weight: bold;
+}
+
+.vermelho {
+  color: #ff2e2e;
+  font-weight: bold;
+}
+
+.percentual {
+  margin: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 10px;
+}
