@@ -3,14 +3,34 @@ function mostrarAmor() {
   amor.style.display = "block";
   amor.scrollIntoView({ behavior: "smooth" });
 }
-function calcularDias() {
-  const inicio = new Date(2025, 10, 24); // Mês começa em 0 (10 = novembro)
-  const hoje = new Date();
+function atualizarContador() {
+  const inicio = new Date("2025-11-24T00:00:00");
+  const agora = new Date();
 
-  const diferenca = hoje - inicio;
-  const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+  let diff = Math.floor((agora - inicio) / 1000); // em segundos
 
-  document.getElementById("dias").textContent = dias;
+  const segundos = diff % 60;
+  diff = Math.floor(diff / 60);
+
+  const minutos = diff % 60;
+  diff = Math.floor(diff / 60);
+
+  const horas = diff % 24;
+  diff = Math.floor(diff / 24);
+
+  const diasTotais = diff;
+
+  const meses = Math.floor(diasTotais / 30);
+  const dias = diasTotais % 30;
+
+  document.getElementById("contador").innerHTML = `
+    💜 Estamos juntos há:<br>
+    <strong>${meses}</strong> meses,
+    <strong>${dias}</strong> dias,
+    <strong>${minutos}</strong> minutos e
+    <strong>${segundos}</strong> segundos 💜
+  `;
 }
 
-calcularDias();
+setInterval(atualizarContador, 1000);
+atualizarContador();
