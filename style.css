@@ -131,3 +131,15 @@ button {
   margin-top: 10px;
   font-size: 16px;
   }
+#contador-dias {
+  text-align: center;
+  font-size: 22px;
+  margin: 25px 0;
+  color: #c084fc;
+  font-weight: bold;
+}
+
+#contador-dias span {
+  color: #ff2e63;
+  font-size: 28px;
+  }
